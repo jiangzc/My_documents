@@ -3,3 +3,5 @@
 网址  http://togather.muxixyz.com/#/
 API请求  https://github.com/ShiinaOrez/to-gather/blob/master/apidoc.yaml
 
+https://petstore.swagger.io/?_ga=2.37847783.594342002.1548146880-776930788.1548146880
+在上面的网页中 搜索栏输入 https://raw.githubusercontent.com/ShiinaOrez/to-gather/master/apidoc.yaml
