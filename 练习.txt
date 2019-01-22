@@ -1,5 +1,5 @@
-写一个API
-请求地址  http://127.0.0.1/weather
+用Flask写一个API
+请求地址  http://127.0.0.1:8000/weather
 参数 城市名称
 city  武汉
 返回  这个城市明天的天气
