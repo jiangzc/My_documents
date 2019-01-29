@@ -2,21 +2,27 @@
 ## 文件
 ### 文件内容查阅
 1. cat [-An] [FILE1] [FILE2] ... 　输出文件内容  
-	   -A 显示特殊字符 $行尾  ^I TAB  
-	   -n 标出行号  
+	```
+	-A 显示特殊字符 $行尾  ^I TAB  
+	-n 标出行号  
+    ```
     
 2. tac 反向输出文件内容（从最后一行开始）
 
 3. more 翻页显示   
-	   [Enter]　下一行   
-	   [Space]　下一页  
-	   [q] 退出  
+	```
+	[Enter]　下一行   
+	[Space]　下一页  
+	[q] 退出
+	```
 4. less  一页一页翻动  
-	   [pageup] [pagedown] 　翻页  
-	   /Str 　向下搜索  
-	   ?Str 　向上搜索  
-	   [n] 　　搜索下一个  
-	   [N] 　　搜索上一个  
+	```
+    [pageup] [pagedown] 　翻页  
+	/Str 　向下搜索  
+	?Str 　向上搜索  
+	[n] 　　搜索下一个  
+	[N] 　　搜索上一个  
+	```
     
 5. head [-n num] [FILE]　　取出前面几行  
 
