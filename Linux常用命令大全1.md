@@ -6,9 +6,7 @@
 	-A 显示特殊字符 $行尾  ^I TAB  
 	-n 标出行号  
     ```
-    
 2. tac 反向输出文件内容（从最后一行开始）
-
 3. more 翻页显示   
 	```
 	[Enter]　下一行   
@@ -23,18 +21,15 @@
 	[n] 　　搜索下一个  
 	[N] 　　搜索上一个  
 	```
-    
 5. head [-n num] [FILE]　　取出前面几行  
-
 6. tail [-n num] [FILE]　　取出后面几行  
-
 7. od [-t TYPE] [FILE]　　输出二进制文件  
 
 ### 文件内容搜索
-grep 　　搜索正则表达式并把匹配的行打印出来  
+grep 　搜索正则表达式并把匹配的行打印出来  
 grep (global search regular expression(RE) and print out the line,全面搜索正则表达式并把行打印出来)是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。  
-**正则表达式简单来说有三大流派：PCRE、BRE、ERE。grep默认使用BRE**  
-**推荐使用Perl正则表达式 grep -P  简洁优美，通用强大**   
+** 正则表达式简单来说有三大流派：PCRE、BRE、ERE。grep默认使用BRE **  
+** 推荐使用Perl正则表达式 grep -P  简洁优美，通用强大 **  
 关于基本、扩展正则表达式的问题参考 http://blog.51cto.com/linuxkeep/956155   
 关于正则流派、引擎的问题参考 https://yelf.me/notes/computer/re/   
 语法：
