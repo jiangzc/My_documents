@@ -167,14 +167,18 @@ Matcher Selection
 	[root@www ~]# dirname /etc/sysconfig/network
 	/etc/sysconfig  <== 取得的变成目录名了！
 	```
-7. file [-i] [FILE]　　辨识文件类型  
+
+### 文件状态
+1. file [-i] [FILE]　　辨识文件类型  
 	它是通过查看文件的头部信息来获取文件类型，而不是像Windows通过扩展名来确定文件类型的。
 	```
 	-i 显示文件的多媒体类型(text/plain)，而不是更易理解的描述(UTF-8 Unicode text)
 	[root@localhost ~]# file install.log
 	install.log: UTF-8 Unicode text
 	```
-	
+2. stat  查看文件状态
+3. touch  新建文件或修改文件时间
+
 ### 差异与校验
 经常用Linux系统下载软件的人，一定会有一个良好的习惯：校验文件的hash，以确定文件的完整性甚至是安全性。校验方法当前一般是MD5，SHA1。   
 1. md5sum [-c] [FILE]　　md5校验  

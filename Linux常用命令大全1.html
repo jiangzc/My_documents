@@ -1,0 +1,975 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>#right-panel {
+    background-color: #fff;
+}
+
+#right-panel .cover-top {
+    background: linear-gradient(to bottom, #fff 50%, transparent);
+}
+
+#cover-bottom #cover-bottom-background-right {
+    background: #fff;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+#container {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #373737;
+  font-family: "Roboto", "Noto Sans", "Ubuntu", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif, "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft Yahei";
+  font-size: 14px;
+  line-height: 2;
+  word-wrap: break-word;
+  background-color: #fff;
+}
+
+#container a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+#container a:active,
+#container a:hover {
+  outline-width: 0;
+}
+
+#container strong {
+  font-weight: inherit;
+}
+
+#container strong {
+  font-weight: bolder;
+}
+
+#container h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+#container img {
+  border-style: none;
+}
+
+#container svg:not(:root) {
+  overflow: hidden;
+}
+
+#container code,
+#container kbd,
+#container pre {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 1em;
+}
+
+#container hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+#container input {
+  font: inherit;
+  margin: 0;
+}
+
+#container input {
+  overflow: visible;
+}
+
+#container button:-moz-focusring,
+#container [type="button"]:-moz-focusring,
+#container [type="reset"]:-moz-focusring,
+#container [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+#container [type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#container table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#container td,
+#container th {
+  padding: 0;
+}
+
+#container * {
+  box-sizing: border-box;
+}
+
+#container input {
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#container a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+#container a:hover,
+#container a:active {
+  text-decoration: underline;
+}
+
+#container hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#container hr::before {
+  display: table;
+  content: "";
+}
+
+#container hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+#container h1 {
+  font-size: 30px;
+}
+
+#container h2 {
+  font-size: 21px;
+}
+
+#container h3 {
+  font-size: 16px;
+}
+
+#container h4 {
+  font-size: 14px;
+}
+
+#container h5 {
+  font-size: 12px;
+}
+
+#container h6 {
+  font-size: 11px;
+}
+
+#container p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#container blockquote {
+  margin: 0;
+}
+
+#container ul,
+#container ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container ol ol,
+#container ul ol {
+  list-style-type: lower-roman;
+}
+
+#container ul ul ol,
+#container ul ol ol,
+#container ol ul ol,
+#container ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+#container dd {
+  margin-left: 0;
+}
+
+#container code {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+}
+
+#container pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+}
+
+#container .pl-0 {
+  padding-left: 0 !important;
+}
+
+#container .pl-1 {
+  padding-left: 3px !important;
+}
+
+#container .pl-2 {
+  padding-left: 6px !important;
+}
+
+#container .pl-3 {
+  padding-left: 12px !important;
+}
+
+#container .pl-4 {
+  padding-left: 24px !important;
+}
+
+#container .pl-5 {
+  padding-left: 36px !important;
+}
+
+#container .pl-6 {
+  padding-left: 48px !important;
+}
+
+#container .form-select::-ms-expand {
+  opacity: 0;
+}
+
+#container:before {
+  display: table;
+  content: "";
+}
+
+#container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container>*:first-child {
+  margin-top: 0 !important;
+}
+
+#container>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+#container a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+#container .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+#container .anchor:focus {
+  outline: none;
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+#container h1 .octicon-link,
+#container h2 .octicon-link,
+#container h3 .octicon-link,
+#container h4 .octicon-link,
+#container h5 .octicon-link,
+#container h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+#container h1:hover .anchor,
+#container h2:hover .anchor,
+#container h3:hover .anchor,
+#container h4:hover .anchor,
+#container h5:hover .anchor,
+#container h6:hover .anchor {
+  text-decoration: none;
+}
+
+#container h1:hover .anchor .octicon-link,
+#container h2:hover .anchor .octicon-link,
+#container h3:hover .anchor .octicon-link,
+#container h4:hover .anchor .octicon-link,
+#container h5:hover .anchor .octicon-link,
+#container h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+#container h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+#container h1 .anchor {
+  line-height: 1;
+}
+
+#container h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+#container h2 .anchor {
+  line-height: 1;
+}
+
+#container h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+#container h3 .anchor {
+  line-height: 1.2;
+}
+
+#container h4 {
+  font-size: 1.25em;
+}
+
+#container h4 .anchor {
+  line-height: 1.2;
+}
+
+#container h5 {
+  font-size: 1em;
+}
+
+#container h5 .anchor {
+  line-height: 1.1;
+}
+
+#container h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+#container h6 .anchor {
+  line-height: 1.1;
+}
+
+#container p,
+#container blockquote,
+#container ul,
+#container ol,
+#container dl,
+#container table,
+#container pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#container hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+#container ul,
+#container ol {
+  padding-left: 2em;
+}
+
+#container ul ul,
+#container ul ol,
+#container ol ol,
+#container ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container li>p {
+  margin-top: 16px;
+}
+
+#container dl {
+  padding: 0;
+}
+
+#container dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#container dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+#container blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+#container blockquote>:first-child {
+  margin-top: 0;
+}
+
+#container blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+#container table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+#container table th {
+  font-weight: bold;
+}
+
+#container table th,
+#container table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+#container table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#container table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+#container img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+#container code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+#container code:before,
+#container code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+#container pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+#container .highlight {
+  margin-bottom: 16px;
+}
+
+#container .highlight pre,
+#container pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+#container .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+#container pre {
+  word-wrap: normal;
+}
+
+#container pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+#container pre code:before,
+#container pre code:after {
+  content: normal;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .pl-c {
+  color: #969896;
+}
+
+#container .pl-c1,
+#container .pl-s .pl-v {
+  color: #0086b3;
+}
+
+#container .pl-e,
+#container .pl-en {
+  color: #795da3;
+}
+
+#container .pl-s .pl-s1,
+#container .pl-smi {
+  color: #333;
+}
+
+#container .pl-ent {
+  color: #63a35c;
+}
+
+#container .pl-k {
+  color: #a71d5d;
+}
+
+#container .pl-pds,
+#container .pl-s,
+#container .pl-s .pl-pse .pl-s1,
+#container .pl-sr,
+#container .pl-sr .pl-cce,
+#container .pl-sr .pl-sra,
+#container .pl-sr .pl-sre {
+  color: #183691;
+}
+
+#container .pl-v {
+  color: #ed6a43;
+}
+
+#container .pl-id {
+  color: #b52a1d;
+}
+
+#container .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+#container .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+#container .pl-ml {
+  color: #693a17;
+}
+
+#container .pl-mh,
+#container .pl-mh .pl-en,
+#container .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+#container .pl-mq {
+  color: #008080;
+}
+
+#container .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+#container .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+#container .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+#container .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+#container .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+#container .pl-mo {
+  color: #1d3e81;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .full-commit .btn-outline:not(:disabled):hover {
+  color: #4078c0;
+  border: 1px solid #4078c0;
+}
+
+#container :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #4078c0;
+}
+
+#container .octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+#container .task-list-item {
+  list-style-type: none;
+}
+
+#container .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+#container .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+#container hr {
+  border-bottom-color: #eee;
+}
+</style><style>/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+</style></head><body id="container" class="export export-html" style="margin-left: 40px;"><span i="1"><h1 id="linux-1">Linux 常用命令大全1</h1>
+</span><span i="2"><h2 id="-">文件</h2>
+</span><span i="3"><h3 id="-">文件内容查阅</h3>
+</span><span i="4"><ol>
+<li><span i="4">cat [-An] [FILE1] [FILE2] ... 　输出文件内容  </span><span i="5"><pre><code> -<span class="ruby">A 显示特殊字符 $行尾  ^I TAB  
+</span> -<span class="ruby">n 标出行号</span>
+</code></pre></span></li>
+<li><span i="8">tac 反向输出文件内容（从最后一行开始）</span></li>
+<li><span i="9">more 翻页显示   </span><span i="10"><pre><code> <span class="hljs-string">[Enter]</span>　下一行   
+ <span class="hljs-string">[Space]</span>　下一页  
+ <span class="hljs-string">[q]</span> 退出
+</code></pre></span></li>
+<li><span i="14">less  一页一页翻动  </span><span i="15"><pre><code> <span class="hljs-string">[pageup]</span> <span class="hljs-string">[pagedown]</span> 　翻页  
+ /Str 　向下搜索  
+ ?Str 　向上搜索  
+ <span class="hljs-string">[n]</span> 　　搜索下一个  
+ <span class="hljs-string">[N]</span> 　　搜索上一个
+</code></pre></span></li>
+<li><span i="21">head [-n num] [FILE]　　取出前面几行  </span></li>
+<li><span i="22">tail [-n num] [FILE]　　取出后面几行  </span></li>
+<li><span i="23">od [-t TYPE] [FILE]　　输出二进制文件  </span></li>
+</ol>
+</span><span i="26"><h3 id="-">文件内容搜索</h3>
+</span><span i="27"><p>grep 　搜索正则表达式并把匹配的行打印出来<br>grep (global search regular expression(RE) and print out the line,全面搜索正则表达式并把行打印出来)是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。<br><strong>正则表达式简单来说有三大流派：PCRE、BRE、ERE。grep默认使用BRE</strong>  </p>
+</span><span i="31"><p><strong>推荐使用Perl正则表达式 grep -P  简洁优美，通用强大</strong><br>关于基本、扩展正则表达式的问题参考 <a href="http://blog.51cto.com/linuxkeep/956155">http://blog.51cto.com/linuxkeep/956155</a><br>关于正则流派、引擎的问题参考 <a href="https://yelf.me/notes/computer/re/">https://yelf.me/notes/computer/re/</a><br>语法：</p>
+</span><span i="35"><pre><code><span class="hljs-keyword">grep</span> [<span class="hljs-keyword">OPTIONS</span>] PATTERN [<span class="hljs-keyword">FILE</span>...]
+<span class="hljs-keyword">grep</span> [<span class="hljs-keyword">OPTIONS</span>] -e PATTERN ... [<span class="hljs-keyword">FILE</span>...]
+<span class="hljs-keyword">grep</span> [<span class="hljs-keyword">OPTIONS</span>] -f <span class="hljs-keyword">FILE</span> ... [<span class="hljs-keyword">FILE</span>...]
+</code></pre></span><span i="40"><ul>
+<li><span i="40">正则流派选项</span><span i="41"><pre><code>Matcher Selection
+     -E, <span class="hljs-comment">--extended-regexp</span>
+       Interpret PATTERN <span class="hljs-keyword">as</span> <span class="hljs-keyword">an</span> extended regular expression (ERE, see below).
+     -F, <span class="hljs-comment">--fixed-strings</span>
+       Interpret  PATTERN <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> list <span class="hljs-keyword">of</span> fixed strings (instead <span class="hljs-keyword">of</span> regular expressions), separated <span class="hljs-keyword">by</span> newlines, <span class="hljs-keyword">any</span> <span class="hljs-keyword">of</span> which is <span class="hljs-built_in">to</span> be matched. 
+     -G, <span class="hljs-comment">--basic-regexp</span>
+        Interpret PATTERN <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> basic regular expression (BRE, see below).  This is <span class="hljs-keyword">the</span> default.
+     -P, <span class="hljs-comment">--perl-regexp</span>
+        Interpret <span class="hljs-keyword">the</span> pattern <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> Perl-compatible regular expression (PCRE).  This is experimental <span class="hljs-keyword">and</span> grep -P  may  warn  <span class="hljs-keyword">of</span> unimplemented features.
+</code></pre></span></li>
+<li><span i="51">匹配控制选项</span><span i="52"><pre><code>-i, --ignore-<span class="hljs-keyword">case</span>
+    Ignore <span class="hljs-keyword">case</span> distinctions, so that characters that differ only <span class="hljs-keyword">in</span> <span class="hljs-keyword">case</span> match <span class="hljs-keyword">each</span> other.
+-v, --invert-match
+    Invert the sense <span class="hljs-keyword">of</span> matching, <span class="hljs-keyword">to</span> <span class="hljs-keyword">select</span> non-matching lines.
+-e PATTERN, --regexp=PATTERN
+    Use  PATTERN <span class="hljs-keyword">as</span> the pattern.  <span class="hljs-keyword">If</span> this <span class="hljs-keyword">option</span> <span class="hljs-keyword">is</span> used multiple times <span class="hljs-keyword">or</span> <span class="hljs-keyword">is</span> combined <span class="hljs-keyword">with</span> the -f (--file) <span class="hljs-keyword">option</span>, search <span class="hljs-keyword">for</span> all patterns given.  This <span class="hljs-keyword">option</span> can be used <span class="hljs-keyword">to</span> protect a pattern beginning <span class="hljs-keyword">with</span> “-”.
+</code></pre></span></li>
+<li><span i="59">文件与文件夹选项</span><span i="60"><pre><code>-r, --recursive
+   Read <span class="hljs-keyword">all</span> <span class="hljs-keyword">files</span> under each directory, recursively, following symbolic links <span class="hljs-keyword">only</span> <span class="hljs-keyword">if</span> they are <span class="hljs-keyword">on</span> the <span class="hljs-keyword">command</span> <span class="hljs-built_in">line</span>.  Note that <span class="hljs-keyword">if</span> <span class="hljs-keyword">no</span> <span class="hljs-keyword">file</span> operand <span class="hljs-keyword">is</span> given, <span class="hljs-keyword">grep</span> searches the working directory.  This <span class="hljs-keyword">is</span> equivalent <span class="hljs-keyword">to</span> the -d recurse option.
+</code></pre></span></li>
+</ul>
+</span><span i="65"><h3 id="-">文件搜索</h3>
+</span><span i="66"><ol>
+<li><span i="66">which [-a] command　　搜索命令程序的位置  </span><span i="67"><pre><code> -<span class="hljs-selector-tag">a</span> 列出所有出现的位置  
+ which -<span class="hljs-selector-tag">a</span> ls　　搜索ls命令的位置
+</code></pre></span></li>
+<li><span i="70">whereis [FILE] 　　搜索二进制文件、手册文件、源文件  </span></li>
+<li><span i="71"><p>locate [-ir] keyword 　　　利用数据库搜索文件  </p>
+</span><span i="72"><pre><code> -<span class="ruby">i  　忽略大小写的差异；  
+</span> -<span class="ruby">r  　后面可接正规表示法的显示方式</span>
+</code></pre></span><span i="78"><p> sudo updatedb　　更新数据库<br> updatedb：根据 /etc/updatedb.conf 的配置去搜寻系统硬盘内的档名，并升级 /var/lib/mlocate 内的数据库文件<br> locate：依据 /var/lib/mlocate 内的数据库记载，找出使用者输入的关键字档名。  </p>
+</span></li>
+<li><span i="80"><p>find [PATH] [option] [action] 　　从硬盘上搜索文件（复杂）<br> 与时间有关的选项：共有 -atime, -ctime 与 -mtime ，以 -mtime 说明</p>
+</span><span i="81"><pre><code> -mtime  <span class="hljs-built_in">n</span> ：<span class="hljs-built_in">n</span> 为数字，意义为在 <span class="hljs-built_in">n</span> 天之前的『一天之内』被更动过内容的文件；
+ -mtime +<span class="hljs-built_in">n</span> ：列出在 <span class="hljs-built_in">n</span> 天之前(不含 <span class="hljs-built_in">n</span> 天本身)被更动过内容的文件档名；
+ -mtime -<span class="hljs-built_in">n</span> ：列出在 <span class="hljs-built_in">n</span> 天之内(含 <span class="hljs-built_in">n</span> 天本身)被更动过内容的文件档名。
+ -newer file ：file 为一个存在的文件，列出比 file 还要新的文件档名
+ +<span class="hljs-number">4</span>代表大於等於<span class="hljs-number">5</span>天前的档名：`ex&gt; <span class="hljs-built_in">find</span> /<span class="hljs-built_in">var</span> -mtime +<span class="hljs-number">4</span>`  
+ -<span class="hljs-number">4</span>代表小於等於<span class="hljs-number">4</span>天内的文件档名：`ex&gt; <span class="hljs-built_in">find</span> /<span class="hljs-built_in">var</span> -mtime -<span class="hljs-number">4</span>`  
+ <span class="hljs-number">4</span>则是代表<span class="hljs-number">4</span>-<span class="hljs-number">5</span>那一天的文件档名：`ex&gt; <span class="hljs-built_in">find</span> /<span class="hljs-built_in">var</span> -mtime <span class="hljs-number">4</span>`
+</code></pre></span><span i="90"><p> 与使用者或群组名称有关的参数：</p>
+</span><span i="91"><pre><code> -<span class="ruby">uid n ：n 为数字，这个数字是使用者的帐号 ID，亦即 UID ，这个 UID 是记录在 /etc/passwd 里面与帐号名称对应的数字。这方面我们会在第四篇介绍。
+</span> -<span class="ruby">gid n ：n 为数字，这个数字是群组名称的 ID，亦即 GID，这个 GID 记录在/etc/group
+</span> -<span class="ruby">user name ：name 为使用者帐号名称喔！例如 dmtsai 
+</span> -<span class="ruby">group name：name 为群组名称喔，例如 users ；
+</span> -<span class="ruby">nouser    ：寻找文件的拥有者不存在 /etc/passwd 的人！
+</span> -<span class="ruby">nogroup   ：寻找文件的拥有群组不存在於 /etc/group 的文件！当你自行安装软件时，很可能该软件的属性当中并没有文件拥有者，这是可能的！在这个时候，就可以使用 -nouser 与 -nogroup 搜寻。</span>
+</code></pre></span><span i="99"><p> 与文件权限及名称有关的参数：  </p>
+</span><span i="100"><pre><code> -<span class="ruby">name filename：搜寻文件名称为 filename 的文件；
+</span> -<span class="ruby">size [+-]SIZE：搜寻比 SIZE 还要大(+)或小(-)的文件。这个 SIZE 的规格有：<span class="hljs-symbol">c:</span> 代表 byte， <span class="hljs-symbol">k:</span> 代表 <span class="hljs-number">1024</span>bytes。所以，要找比 <span class="hljs-number">50</span>KB还要大的文件，就是『 -size +<span class="hljs-number">50</span>k 』
+</span> -<span class="ruby">type TYPE    ：搜寻文件的类型为 TYPE 的，类型主要有：一般正规文件 (f),装置文件 (b, c), 目录 (d), 连结档 (l), socket (s),及 FIFO (p) 等属性。
+</span> -<span class="ruby">perm mode  ：搜寻文件权限『刚好等於』 mode 的文件，这个 mode 为类似 chmod的属性值，举例来说， -rwsr-xr-x 的属性为 <span class="hljs-number">4755</span> ！
+</span> -<span class="ruby">perm -mode ：搜寻文件权限『必须要全部囊括 mode 的权限』的文件，举例来说，我们要搜寻 -rwxr--r-- ，亦即 <span class="hljs-number">0744</span> 的文件，使用 -perm -<span class="hljs-number">0744</span>，当一个文件的权限为 -rwsr-xr-x ，亦即 <span class="hljs-number">4755</span> 时，也会被列出来，因为 -rwsr-xr-x 的属性已经囊括了 -rwxr--r-- 的属性了。
+</span> -<span class="ruby">perm +mode ：搜寻文件权限『包含任一 mode 的权限』的文件，举例来说，我们搜寻-rwxr-xr-x ，亦即 -perm +<span class="hljs-number">755</span> 时，但一个文件属性为 -rw-------也会被列出来，因为他有 -rw.... 的属性存在！</span>
+</code></pre></span><span i="108"><p> 额外可进行的动作：</p>
+</span><span i="109"><pre><code> -<span class="hljs-built_in">exec</span> command ：command 为其他命令，-<span class="hljs-built_in">exec</span> 后面可再接额外的命令来处理搜寻到的结果。
+ -<span class="hljs-keyword">print</span>        ：将结果列印到萤幕上，这个动作是默认动作！
+</code></pre></span><span i="118"><p> find 的特殊功能就是能够进行额外的动作(action)。例如：<br> <code>sudo find /var/log -type f -name "*.gz" -exec rm -f {} \;</code><br> 该范例中特殊的地方有 {} 以及 \; 还有 -exec 这个关键字，这些东西的意义为：<br>{} 代表的是『由 find 找到的内容』，如上图所示，find 的结果会被放置到 {} 位置中；<br>-exec 一直到 \; 是关键字，代表 find 额外动作的开始 (-exec) 到结束 (\;) ，在这中间的就是 find 命令内的额外动作。<br>因为『 ; 』在 bash 环境下是有特殊意义的，因此利用反斜线来跳脱。  </p>
+</span></li>
+</ol>
+</span><span i="121"><h3 id="-">文件操作与管理</h3>
+</span><span i="122"><ol>
+<li><span i="122">ls [-aAdfFhilnrRSt] [DIR]　　文件与目录的检阅  </span><span i="123"><pre><code> -<span class="ruby">a  ：全部的文件，连同隐藏档( 开头为 . 的文件) 一起列出来(常用)    
+</span> -<span class="ruby">d  ：仅列出目录本身，而不是列出目录内的文件数据(常用)
+</span> -<span class="ruby">h  ：将文件容量以人类较易读的方式(例如 GB, KB 等等)列出来(常用)；
+</span> -<span class="ruby">l  ：长数据串列出，包含文件的属性与权限等等数据；(常用)
+</span> -<span class="ruby">f  ：直接列出结果，而不进行排序 (ls 默认会以档名排序！)
+</span> -<span class="ruby">i  ：列出 inode 号码，inode 的意义下一章将会介绍；
+</span> -<span class="ruby">n  ：列出 UID 与 GID 而非使用者与群组的名称 (UID与GID会在帐号管理提到！)
+</span> -<span class="ruby">R  ：连同子目录内容一起列出来，等於该目录下的所有文件都会显示出来；</span>
+</code></pre></span></li>
+<li><span i="132">cp [-adfilprsu] [source] [destination]　　复制  </span><span i="133"><pre><code> -<span class="ruby">a  ：相当於 -pdr 的意思，至於 pdr 请参考下列说明；(常用)
+</span> -<span class="ruby">d  ：若来源档为连结档的属性(link file)，则复制连结档属性而非文件本身；
+</span> -<span class="ruby">f  ：为强制(force)的意思，若目标文件已经存在且无法开启，则移除后再尝试一次；
+</span> -<span class="ruby">i  ：若目标档(destination)已经存在时，在覆盖时会先询问动作的进行(常用)
+</span> -<span class="ruby">l  ：进行硬式连结(hard link)的连结档创建，而非复制文件本身；
+</span> -<span class="ruby">p  ：连同文件的属性一起复制过去，而非使用默认属性(备份常用)；
+</span> -<span class="ruby">r  ：递回持续复制，用於目录的复制行为；(常用)
+</span> -<span class="ruby">s  ：复制成为符号连结档 (symbolic link)，亦即『捷径』文件；
+</span> -<span class="ruby">u  ：若 destination 比 source 旧才升级 destination ！</span>
+</code></pre></span></li>
+<li><span i="143">rm [-fir] [FILE|DIR]　　删除</span><span i="144"><pre><code> -<span class="ruby">f  ：就是 force 的意思，忽略不存在的文件，不会出现警告信息；
+</span> -<span class="ruby">i  ：互动模式，在删除前会询问使用者是否动作
+</span> -<span class="ruby">r  ：递回删除啊！最常用在目录的删除了！这是非常危险的选项！！！</span>
+</code></pre></span></li>
+<li><span i="148">mv [-fiu] [source] [destination]　　移动、重命名</span><span i="149"><pre><code> -<span class="ruby">f  ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖；
+</span> -<span class="ruby">i  ：若目标文件 (destination) 已经存在时，就会询问是否覆盖！
+</span> -<span class="ruby">u  ：若目标文件已经存在，且 source 比较新，才会升级 (update)</span>
+</code></pre></span></li>
+<li><span i="153">basename [path]　　获取文件名</span></li>
+<li><span i="154">dirname [path]　　获取目录名</span><span i="155"><pre><code> [root<span class="hljs-symbol">@www</span> ~]<span class="hljs-meta"># basename /etc/sysconfig/network</span>
+ network         &lt;== 很简单！就取得最后的档名～
+ [root<span class="hljs-symbol">@www</span> ~]<span class="hljs-meta"># dirname /etc/sysconfig/network</span>
+ /etc/sysconfig  &lt;== 取得的变成目录名了！
+</code></pre></span></li>
+</ol>
+</span><span i="162"><h3 id="-">文件状态</h3>
+</span><span i="163"><ol>
+<li><span i="164">file [-i] [FILE]　　辨识文件类型<br> 它是通过查看文件的头部信息来获取文件类型，而不是像Windows通过扩展名来确定文件类型的。</span><span i="165"><pre><code> -i 显示文件的多媒体类型(<span class="hljs-keyword">text</span>/plain)，而不是更易理解的描述(UTF<span class="hljs-number">-8</span> Unicode <span class="hljs-keyword">text</span>)
+ [root@localhost ~]# <span class="hljs-keyword">file</span> install.<span class="hljs-keyword">log</span>
+ install.<span class="hljs-keyword">log</span>: UTF<span class="hljs-number">-8</span> Unicode <span class="hljs-keyword">text</span>
+</code></pre></span></li>
+<li><span i="169">stat  查看文件状态</span></li>
+<li><span i="170">touch  新建文件或修改文件时间</span><span i="171"><h3 id="-">差异与校验</h3>
+</span><span i="172">经常用Linux系统下载软件的人，一定会有一个良好的习惯：校验文件的hash，以确定文件的完整性甚至是安全性。校验方法当前一般是MD5，SHA1。   </span></li>
+<li><span i="173">md5sum [-c] [FILE]　　md5校验  </span><span i="174"><pre><code> -<span class="ruby">c 从文件中读取校验码和文件名进行确认
+</span> md5sum aa          
+ a0a2ae54db7177569d620befdc589aff  aa
+</code></pre></span></li>
+<li><span i="178">sha1sum [FILE]　　sha1校验</span></li>
+<li><span i="179">cksum [FILE]　　CRC校验</span></li>
+<li><span i="181">diff [FILE1] [FILE2] 　比较两个文本文件的差异<br> diff分析两个文件，并输出两个文件的不同的行。diff的输出结果表明需要对一个文件做怎样的操作之后才能与第二个文件相匹配。  </span><span i="182"><pre><code>我们使用diff比较他们的不同：  
+diff file1.txt file2.txt
+输出如下结果：
+<span class="hljs-number">2</span>,<span class="hljs-number">4</span>c2,<span class="hljs-number">4</span>
+&lt; I need to run the laundry.
+&lt; I need to wash the dog.
+&lt; I need to get the car detailed.
+&gt; I need to do the laundry.
+&gt; I need to wash the car.
+&gt; I need to get the dog detailed.
+我们来说明一下该输出结果的含义，要明白diff比较结果的含义，我们必须牢记一点，diff描述两个文件不同的方式是告诉我们怎么样改变第一个文件之后与第二个文件匹配。我们看看上面的比较结果中的第一行 <span class="hljs-number">2</span>,<span class="hljs-number">4</span>c2,<span class="hljs-number">4</span> 前面的数字<span class="hljs-number">2</span>,<span class="hljs-number">4</span>表示第一个文件中的行，中间有一个字母c表示需要在第一个文件上做的操作(a=add,c=change,d=delete)，后面的数字<span class="hljs-number">2</span>,<span class="hljs-number">4</span>表示第二个文件中的行。
+<span class="hljs-number">2</span>,<span class="hljs-number">4</span>c2,<span class="hljs-number">4</span> 的含义是：第一个文件中的第[<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]行(注意这是一个闭合区间，包括第<span class="hljs-number">2</span>行和第<span class="hljs-number">4</span>行)需要做出修改才能与第二个文件中的[<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]行相匹配。
+接下来的内容则告诉我们需要修改的地方，前面带 &lt; 的部分表示左边文件的第[<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]行的内容，而带&gt; 的部分表示右边文件的第[<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]行的内容，中间的 --- 则是两个文件内容的分隔符号。
+</code></pre></span><span i="197"> 参考资料： <a href="https://www.cnblogs.com/wf-linux/p/9488257.html">https://www.cnblogs.com/wf-linux/p/9488257.html</a></span></li>
+</ol>
+</span><span i="200"><h3 id="-">权限与属性</h3>
+</span><span i="201"><ol>
+<li><span i="201">chown</span></li>
+<li><span i="202">chgrp</span></li>
+<li><span i="203">chmod</span></li>
+<li><span i="204">chattr</span></li>
+<li><span i="205">lsattr</span></li>
+<li><span i="206">umask</span></li>
+</ol>
+</span></body>
+</html>
