@@ -23,7 +23,7 @@ securityDefinitions:
 
       
 paths:
-  /login:
+  /login/:
      post:
         tags:
           - auth
@@ -50,6 +50,8 @@ paths:
                 id:
                   type: integer
                   description: user id
+                openid:
+                  type: string
                 stdnum:
                   type: string
                 department_id:
@@ -73,7 +75,7 @@ paths:
           401:
             description: Unauthorized, need to register 
 
-  /check:
+  /check/:
     get:
       security: 
         - APIKeyHeader: []
@@ -87,7 +89,7 @@ paths:
         401:
           description: Unauthorized, invalid user
           
-  /register:
+  /register/:
     post:
       tags: 
         - auth
@@ -130,7 +132,7 @@ paths:
                 description: 1. Username or password is wrong
                              2. Already registered
 
-  /users/myself:
+  /users/info:
     put:
       security: 
         - APIKeyHeader: []
@@ -140,7 +142,6 @@ paths:
       consumes:
         - application/x-www-form-urlencoded
       parameters: 
-          
         - in: formData
           name: qq
           type: string
@@ -197,7 +198,7 @@ paths:
               likes:
                 type: integer
       
-  /users/{id}:
+  /users/info/{id}:
     get:
       tags: 
         - user
@@ -370,7 +371,7 @@ paths:
                 likes:
                   type: integer
                   
-  /werun/myself:
+  /werun/:
     get:
       summary: Get my werun data
       security:
@@ -428,7 +429,7 @@ paths:
           description: Created
         401:
           description: Unauthorized 
-  /likes:
+  /likes/:
     get:
       tags: 
         - like
@@ -498,7 +499,7 @@ paths:
           description: Unauthorized 
     
     
-  /suggestions:
+  /suggestions/:
     post:
       security: 
         - APIKeyHeader: []
@@ -508,10 +509,6 @@ paths:
       consumes: 
         - application/x-www-form-urlencoded
       parameters: 
-        - in: formData
-          name: time
-          type: string
-          description: YYYY-MM-DD
         - in: formData
           name: contact
           type: string
