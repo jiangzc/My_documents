@@ -1,7 +1,7 @@
 swagger: "2.0"
 
 info:
-  version: "0.1"
+  version: "1"
   title: Rank miniProgram API
   description: a document of Rank miniProgram API
 
@@ -132,7 +132,7 @@ paths:
                 description: 1. Username or password is wrong
                              2. Already registered
 
-  /users/info:
+  /users/my/info/:
     put:
       security: 
         - APIKeyHeader: []
@@ -198,7 +198,7 @@ paths:
               likes:
                 type: integer
       
-  /users/info/{id}:
+  /users/{id}/info/:
     get:
       tags: 
         - user
@@ -326,6 +326,8 @@ paths:
                   type: string
                 likes:
                   type: integer
+                count:
+                  type: integer
                   
   /rank/step/dept/week:
     get:
@@ -348,6 +350,8 @@ paths:
                   type: string
                 likes:
                   type: integer
+                count:
+                  type: integer
                   
   /rank/step/dept/month:
     get:
@@ -369,6 +373,8 @@ paths:
                 department_name:
                   type: string
                 likes:
+                  type: integer
+                count:
                   type: integer
                   
   /werun/:
