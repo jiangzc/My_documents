@@ -89,11 +89,11 @@ paths:
         401:
           description: Unauthorized, invalid user
           
-  /register/:
+  /bind/:
     post:
       tags: 
         - auth
-      summary: Register a new user
+      summary: Bind stdnum and wechat
       consumes:
         - application/x-www-form-urlencoded
       parameters: 
@@ -109,9 +109,9 @@ paths:
           
         - in: formData
           required: true
-          name: openid
+          name: code
           type: string
-          description: Unique identifier of wechat (Tencent)
+          description: wx.login
           
         - in: formData
           required: true
@@ -121,7 +121,7 @@ paths:
           
       responses:
         200:
-          description: OK, registered, need to login
+          description: OK, binded, need to login
         400:
           description: Bad request
           schema:
