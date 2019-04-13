@@ -277,7 +277,28 @@ paths:
         400:
           description: User does not exist
           
-
+  /users/lib/:
+    post:
+      tags: 
+        - user
+      summary: update library
+      consumes:
+        - application/json
+      parameters: 
+        - in: body
+          name: data
+          schema:
+            type: object
+            properties:
+              stdnum:
+                type: string
+              password:
+                type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
       
   /rank/lib:
     get:
@@ -288,22 +309,18 @@ paths:
       summary: Get library rank, return a list
       parameters: 
         - in: query
-          name: offset
+          name: page
           type: integer
-          description: from which position to start
-          default: 0
-        - in: query
-          name: limit
-          type: integer
-          description: length of the ranking list
-          default: 10
+          default: 1
       responses:
         200:
           description: OK
           schema:
             type: object
             properties:
-              total:
+              total_page:
+                type: integer
+              now_page:
                 type: integer
               my:
                 type: object
@@ -341,22 +358,18 @@ paths:
       summary: Get step rank, return a list
       parameters: 
         - in: query
-          name: offset
+          name: page
           type: integer
-          description: from which position to start
-          default: 0
-        - in: query
-          name: limit
-          type: integer
-          description: length of the ranking list
-          default: 10
+          default: 1
       responses:
         200:
           description: OK
           schema:
             type: object
             properties:
-              total:
+              total_page:
+                type: integer
+              now_page:
                 type: integer
               my:
                 type: object
