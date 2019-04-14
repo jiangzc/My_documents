@@ -500,14 +500,13 @@ paths:
           name: array
           description: information from wx.getWeRunData()
           schema:
-            type: array
-            items:
-              type: object
-              properties:
-                timestamp:
-                  type: string
-                step:
-                  type: integer
+            type: object
+            properties:
+              encryptedData:
+                type: string
+              iv:
+                type: string
+                
       responses:
         200:
           description: Created
