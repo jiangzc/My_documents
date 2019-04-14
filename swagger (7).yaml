@@ -237,6 +237,10 @@ paths:
                 type: integer
               likes:
                 type: integer
+              rank:
+                type: integer
+              contribute:
+                type: integer
       
   /users/{id}/info/:
     get:
@@ -273,6 +277,10 @@ paths:
               step:
                 type: integer
                 description: today's step
+              rank:
+                type: integer
+              contribute:
+                type: integer
         
         400:
           description: User does not exist
