@@ -74,20 +74,6 @@ paths:
             description: code Error
           401:
             description: Unauthorized, need to register 
-
-  /check/:
-    get:
-      security: 
-        - APIKeyHeader: []
-      tags: 
-        - auth
-      summary: check user's login status
-
-      responses:
-        200:
-          description: OK, valid user
-        401:
-          description: Unauthorized, invalid user
           
   /bind/:
     post:
@@ -274,6 +260,8 @@ paths:
                 type: integer
               likes:
                 type: integer
+              is_liked:
+                type: boolean
               step:
                 type: integer
                 description: today's step
@@ -513,31 +501,6 @@ paths:
         401:
           description: Unauthorized 
   /likes/:
-    get:
-      tags: 
-        - like
-      security: 
-        - APIKeyHeader: []
-      summary: Likes info about a user
-      parameters: 
-        - in: query
-          name: star_id
-          type: integer
-          description: get likes info about this user
-          
-      responses:
-        200:
-          description: OK
-          schema:
-            type: object
-            properties:
-              is_liked:
-                type: boolean
-              stars:
-                type: integer
-        401:
-          description: Unauthorized 
-          
     post:
       tags: 
         - like
