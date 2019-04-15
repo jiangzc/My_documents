@@ -130,7 +130,7 @@ paths:
           schema:
             type: object
             properties:
-              base64:
+              url:
                 type: string
           
       responses:
@@ -157,7 +157,7 @@ paths:
           schema:
             type: object
             properties:
-              base64:
+              url:
                 type: string
         401:
           description: Unauthorized 
