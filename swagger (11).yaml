@@ -96,6 +96,8 @@ paths:
                 type: string
               username:
                 type: string
+              url:
+                type: string
 
           
       responses:
@@ -275,6 +277,8 @@ paths:
           
   /users/lib/:
     post:
+      security: 
+        - APIKeyHeader: []
       tags: 
         - user
       summary: update library
@@ -331,6 +335,8 @@ paths:
                     type: string
                   likes:
                     type: integer
+                  url:
+                    type: string
               list:
                 type: array
                 items:
@@ -344,6 +350,8 @@ paths:
                       type: string
                     likes:
                       type: integer
+                    url:
+                      type: string
 
   /rank/step/person:
     get:
@@ -380,6 +388,8 @@ paths:
                     type: string
                   likes:
                     type: integer
+                  url:
+                    type: string
               list:
                 type: array
                 items:
@@ -393,6 +403,8 @@ paths:
                       type: string
                     likes:
                       type: integer
+                    url:
+                      type: string
                   
                   
   /rank/step/dept/week:
