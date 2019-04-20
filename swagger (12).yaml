@@ -184,6 +184,7 @@ paths:
                 type: boolean
               show_qq:
                 type: boolean
+
       
       responses:
         200:
@@ -229,6 +230,8 @@ paths:
                 type: integer
               contribute:
                 type: integer
+              url:
+                type: string
       
   /users/{id}/info/:
     get:
@@ -271,6 +274,8 @@ paths:
                 type: integer
               contribute:
                 type: integer
+              url:
+                type: string
         
         400:
           description: User does not exist
