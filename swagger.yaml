@@ -180,6 +180,8 @@ paths:
             properties:
               qq:
                 type: string
+              username:
+                type: string
               show_stdnum:
                 type: boolean
               show_qq:
