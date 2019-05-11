@@ -75,7 +75,7 @@ paths:
           401:
             description: Unauthorized, need to register 
           
-  /bind/:
+  /bind/student:
     post:
       tags: 
         - auth
@@ -117,6 +117,80 @@ paths:
                 type: string
                 description: 1. Username or password is wrong
                              2. Already registered
+                             
+  /bind/visitor:
+    post:
+      tags: 
+        - auth
+      summary: Bind wechat
+      consumes:
+        - application/json
+      parameters: 
+        - in: body
+          name: data
+          schema:
+            type: object
+            properties:
+              code:
+                type: string
+              username:
+                type: string
+              url:
+                type: string
+
+      responses:
+        200:
+          description: OK, binded, need to login
+          headers:
+            Set-Cookie:
+              type: string
+              description: a string to save user's session 
+                          like "session=afefw##q32"
+        400:
+          description: Bad request
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+
+  /rebind/student:
+    post:
+      tags: 
+        - auth
+      summary: Bind stdnum
+      consumes:
+        - application/json
+      parameters: 
+        - in: body
+          name: data
+          schema:
+            type: object
+            properties:
+              stdnum:
+                type: string
+              password:
+                type: string
+              code:
+                type: string
+
+      responses:
+        200:
+          description: OK, binded, need to login
+          headers:
+            Set-Cookie:
+              type: string
+              description: a string to save user's session 
+                          like "session=afefw##q32"
+        400:
+          description: Bad request
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+
+                             
   /users/my/info/avatar:
     put:
       security: 
